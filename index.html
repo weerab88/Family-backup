@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Family Backup helps families find useful local support, services and community connections. Starting in Glasgow.">
+<title>Family Backup | Support for families, all in one place</title>
+<style>
+:root{--navy:#17324d;--teal:#2b8c88;--mint:#e8f5f1;--cream:#fbfaf6;--ink:#203244;--muted:#607180;--line:#dce7e6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(251,250,246,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;font-size:1.15rem;letter-spacing:-.04em;color:var(--navy)}
+.logo{width:42px;height:42px;border-radius:14px;background:var(--teal);display:grid;place-items:center;color:white;font-weight:900;font-size:1.2rem}
+nav{display:flex;align-items:center;gap:22px}nav a{text-decoration:none;font-size:.93rem;font-weight:650;color:#43596a}nav a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:999px;padding:13px 21px;font-weight:750;background:var(--teal);color:white}.btn:hover{background:#237b77}.btn.secondary{background:white;color:var(--navy);border:1px solid var(--line)}
+.hero{padding:78px 0 72px;background:radial-gradient(circle at 85% 20%,#d9eee8 0,transparent 32%),linear-gradient(135deg,#f4f8f4 0%,#f8f7f1 70%)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-size:.78rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:2px;background:var(--teal)}
+h1{font-size:clamp(2.7rem,6vw,4.9rem);line-height:1.02;letter-spacing:-.065em;color:var(--navy);margin:18px 0 22px;max-width:680px}h1 span{color:var(--teal)}
+.lead{font-size:1.17rem;color:#536879;max-width:590px;margin:0 0 29px}.actions{display:flex;gap:12px;flex-wrap:wrap}.small-note{font-size:.85rem;color:var(--muted);margin-top:18px}
+.hero-card{background:white;border:1px solid #e1ebe6;border-radius:28px;padding:28px;box-shadow:0 22px 60px #17324d12;transform:rotate(1deg)}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.pill{background:var(--mint);color:#267b72;border-radius:999px;padding:7px 12px;font-size:.76rem;font-weight:800}
+.support-item{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-top:1px solid #edf1ef}.support-icon{width:42px;height:42px;flex:none;border-radius:14px;background:#eff6f4;display:grid;place-items:center;font-size:1.2rem}.support-item strong{display:block;color:var(--navy);margin-bottom:2px}.support-item small{color:var(--muted)}
+section{padding:74px 0}.section-head{max-width:680px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.05em;color:var(--navy);margin:12px 0}.section-head p{color:var(--muted);font-size:1.05rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tile{background:white;border:1px solid var(--line);border-radius:22px;padding:25px}.tile .emoji{font-size:1.65rem}.tile h3{color:var(--navy);margin:13px 0 7px;font-size:1.15rem}.tile p{color:var(--muted);margin:0;font-size:.96rem}
+.soft{background:#edf5f1}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{padding:24px 0;border-top:2px solid #b7d7ce}.num{font-weight:900;color:var(--teal);font-size:.82rem;letter-spacing:.1em}.step h3{color:var(--navy);margin:8px 0}.step p{color:var(--muted);margin:0}
+.callout{background:var(--navy);color:white;border-radius:28px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:28px}.callout h2{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.05em;line-height:1.1;margin:0 0 10px}.callout p{color:#d4e0e8;margin:0;max-width:620px}.callout .btn{background:#fff;color:var(--navy);white-space:nowrap}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-panel{background:var(--mint);border-radius:26px;padding:32px}.about-panel strong{display:block;color:var(--navy);font-size:1.15rem;margin-bottom:8px}.about-panel p{margin:0;color:#536879}
+.contact-box{background:white;border:1px solid var(--line);border-radius:24px;padding:28px;max-width:720px}.contact-box p{color:var(--muted)}.contact-box a{color:var(--teal);font-weight:750}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.directory-tools{background:white;border:1px solid var(--line);border-radius:22px;padding:20px;margin-bottom:22px}
+.directory-tools input{width:100%;padding:15px 16px;border:1px solid #b9cbc8;border-radius:12px;font:inherit;font-size:1rem;color:var(--ink);background:#fff}
+.directory-tools input:focus{outline:3px solid #b8ded5;outline-offset:2px}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.filter{border:1px solid var(--line);background:#f7faf8;color:var(--navy);border-radius:999px;padding:9px 14px;font:inherit;font-size:.9rem;font-weight:700;cursor:pointer}
+.filter.active,.filter:hover{background:var(--navy);color:white;border-color:var(--navy)}
+.directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.directory-card{background:white;border:1px solid var(--line);border-radius:20px;padding:23px;display:flex;flex-direction:column;align-items:flex-start}
+.directory-card h3{color:var(--navy);margin:12px 0 7px;font-size:1.18rem}
+.directory-card p{color:var(--muted);margin:0 0 15px}
+.directory-card>a{color:var(--teal);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.category-tag{background:var(--mint);color:#267b72;border-radius:999px;padding:6px 11px;font-size:.78rem;font-weight:800}
+.card-note{font-size:.84rem;color:var(--muted);margin-top:12px}
+.no-results{padding:20px;background:white;border-radius:14px;color:var(--muted)}
+.directory-disclaimer{font-size:.87rem;color:var(--muted);margin-top:20px}
+@media(max-width:800px){.directory-grid{grid-template-columns:1fr}}
+
+@media(max-width:800px){.hero-grid,.about{grid-template-columns:1fr}.hero{padding:58px 0}.hero-card{transform:none}.grid3,.steps{grid-template-columns:1fr}.callout{align-items:flex-start;flex-direction:column}nav{gap:8px 14px;flex-wrap:wrap;justify-content:flex-end;max-width:62%}nav a{font-size:.78rem}.nav{padding:12px 0;align-items:center}.nav>.btn{display:none}.brand{font-size:1rem}.logo{width:38px;height:38px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">FB</span><span>Family Backup</span></a>
+<nav aria-label="Main navigation"><a href="#directory">Directory</a><a href="#housing">Housing help</a><a href="#about">About</a><a href="#partners">Partners</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="#join">Get involved</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div><div class="eyebrow">Starting in Glasgow</div>
+<h1>Support for families.<br><span>All in one place.</span></h1>
+<p class="lead">Finding the right help can feel overwhelming. Family Backup aims to make it easier for families to discover local support, useful services and community connections.</p>
+<div class="actions"><a class="btn" href="#support">Explore support</a><a class="btn secondary" href="#join">Help shape Family Backup</a></div>
+<p class="small-note">A new community-focused idea, being developed with families.</p></div>
+<div class="hero-card"><div class="card-top"><strong>What matters to families</strong><span class="pill">Here to help</span></div>
+<div class="support-item"><span class="support-icon">🏡</span><div><strong>Family and home</strong><small>Practical guidance and local services</small></div></div>
+<div class="support-item"><span class="support-icon">💬</span><div><strong>Someone to talk to</strong><small>Find organisations and support networks</small></div></div>
+<div class="support-item"><span class="support-icon">🎒</span><div><strong>Children and young people</strong><small>Activities, learning and opportunities</small></div></div>
+<div class="support-item"><span class="support-icon">🤝</span><div><strong>Community connections</strong><small>Discover groups and helpful local partners</small></div></div>
+</div></div></section>
+<section id="support"><div class="wrap"><div class="section-head"><div class="eyebrow">Find your next step</div><h2>What kind of support are you looking for?</h2><p>We want to make it simpler to find useful information and connect with trusted local organisations. These are the areas Family Backup is exploring.</p></div>
+<div class="grid3">
+<article class="tile"><div class="emoji">👨‍👩‍👧‍👦</div><h3>Family support</h3><p>Information about services and organisations that support parents, carers and families.</p></article>
+<article class="tile"><div class="emoji">🧒</div><h3>Children and young people</h3><p>Ideas for local activities, development opportunities and positive community spaces.</p></article>
+<article class="tile"><div class="emoji">💚</div><h3>Wellbeing and connection</h3><p>Help discovering community groups, advice services and places where people can connect.</p></article>
+</div></div></section>
+
+<section id="directory" class="soft"><div class="wrap"><div class="section-head"><div class="eyebrow">Glasgow support directory</div><h2>Find support that may help your family.</h2><p>Search these starting points and contact the organisation directly to check current availability, eligibility and opening times. Family Backup does not provide the services itself.</p></div>
+<div class="directory-tools"><label for="directory-search" class="sr-only">Search support organisations</label><input id="directory-search" type="search" placeholder="Search food, housing, benefits, family support…" autocomplete="off"><div class="filters" role="group" aria-label="Filter by support category"><button class="filter active" data-filter="all" type="button">All support</button><button class="filter" data-filter="food" type="button">Food</button><button class="filter" data-filter="family" type="button">Family support</button><button class="filter" data-filter="money" type="button">Benefits & money</button><button class="filter" data-filter="housing" type="button">Housing</button></div></div>
+<div id="directory-results" class="directory-grid" aria-live="polite">
+<article class="directory-card" data-category="food" data-search="food emergency foodbank food bank glasgow south west cardonald penilee ibrox linthouse"><span class="category-tag">Food support</span><h3>Glasgow South West Foodbank</h3><p>Provides emergency food support through its foodbank network. A referral voucher is normally needed before collecting a food parcel; check the website for how to get help and current locations.</p><a href="https://glasgowsw.foodbank.org.uk/get-help/how-to-get-help/" target="_blank" rel="noopener">How to get help</a><span class="card-note">Check referral arrangements and collection times before travelling.</span></article>
+<article class="directory-card" data-category="family" data-search="family children first parents carers emotional practical support south glasgow"><span class="category-tag">Family support</span><h3>Children First – Glasgow</h3><p>Offers support for children and families, including help with difficult family circumstances and emotional wellbeing. Contact the organisation to discuss what support is currently available.</p><a href="https://www.childrenfirst.org.uk/get-support/our-services/local-services/glasgow/" target="_blank" rel="noopener">Glasgow services</a><span class="card-note">Ask about eligibility and local availability.</span></article>
+<article class="directory-card" data-category="money" data-search="benefits money universal credit advice single parent childcare crisis support one parent families scotland"><span class="category-tag">Benefits & money</span><h3>One Parent Families Scotland</h3><p>Provides information and support for single-parent families, including benefits, money, childcare and family-related advice.</p><a href="https://opfs.org.uk/who-we-are/local-services/glasgow/" target="_blank" rel="noopener">Glasgow services</a><span class="card-note">Its services are aimed at single-parent families; check current criteria.</span></article>
+<article class="directory-card" data-category="housing" data-search="housing homelessness rent eviction advice shelter scotland"><span class="category-tag">Housing</span><h3>Shelter Scotland</h3><p>Free housing advice about homelessness, eviction, renting, housing rights and finding somewhere to live.</p><a href="https://scotland.shelter.org.uk/get_help" target="_blank" rel="noopener">Get housing help</a><span class="card-note">Helpline: 0808 800 4444, Monday to Friday, 9am–5pm.</span></article>
+<article class="directory-card" data-category="housing" data-search="glasgow city council homeless homelessness emergency temporary accommodation housing application south community homeless service"><span class="category-tag">Housing · Glasgow</span><h3>Glasgow City Council – Homelessness Team</h3><p>If you are homeless or likely to become homeless, contact the council and say you need to make a homelessness application. The council can assess your situation and arrange temporary accommodation if required.</p><a href="https://scotland.shelter.org.uk/get_help/get_homelessness_help_in_glasgow" target="_blank" rel="noopener">Glasgow homelessness help and contact details</a><span class="card-note">Phone 0141 287 0555. Out of hours: 0800 838 502.</span></article>
+<article class="directory-card" data-category="housing" data-search="rent deposit first month rent private renting deposit guarantee scheme help money housing costs"><span class="category-tag">Housing · Rent and deposits</span><h3>Help with a rent deposit</h3><p>You may be able to get help with a private-rent deposit or first month's rent through a local rent deposit or guarantee scheme, a grant, or a council scheme. Eligibility varies by area.</p><a href="https://scotland.shelter.org.uk/housing_advice/money_help/deposit_help" target="_blank" rel="noopener">Explore deposit help</a><span class="card-note">Ask your local council about schemes in your area before paying a landlord or agent.</span></article>
+<article class="directory-card" data-category="housing" data-search="citizens advice scotland council housing application private rent tenancy rights rent arrears"><span class="category-tag">Housing · Advice</span><h3>Citizens Advice Scotland</h3><p>Independent information about applying for a council house, private renting, tenancy costs, housing rights and homelessness.</p><a href="https://www.citizensadvice.org.uk/scotland/housing/finding-somewhere-to-live/" target="_blank" rel="noopener">Housing advice for Scotland</a><span class="card-note">Find advice on council housing, renting and help with costs.</span></article>
+</div><p id="no-results" class="no-results" hidden>No matching listings. Try another word or choose “All support”.</p><p class="directory-disclaimer">Listings are a starting point, not a guarantee of assistance. Please confirm details directly with each provider. If you spot an error, contact Family Backup so it can be reviewed.</p>
+</div></section>
+
+<section id="housing"><div class="wrap"><div class="section-head"><div class="eyebrow">Housing support</div><h2>Need help finding or keeping a home?</h2><p>Start with the option that best matches your situation. These links lead to established housing advice and local services; Family Backup does not make housing decisions or guarantee a property, grant or deposit.</p></div>
+<div class="grid3">
+<article class="tile"><div class="emoji">🏠</div><h3>Looking for a home</h3><p>Find information about council housing applications, housing associations and private renting.</p><p><a href="https://www.citizensadvice.org.uk/scotland/housing/finding-somewhere-to-live/finding-a-home-to-rent-s/" target="_blank" rel="noopener">Read about finding a home</a></p></article>
+<article class="tile"><div class="emoji">🔑</div><h3>Deposit or rent help</h3><p>Check whether a rent deposit or guarantee scheme, grant or Discretionary Housing Payment may be available.</p><p><a href="https://scotland.shelter.org.uk/housing_advice/money_help/deposit_help" target="_blank" rel="noopener">Check deposit support options</a></p></article>
+<article class="tile"><div class="emoji">☎️</div><h3>Homeless or at risk?</h3><p>Contact Glasgow City Council's Homelessness Team and explain that you need to make a homelessness application.</p><p><strong>0141 287 0555</strong><br><strong>Out of hours: 0800 838 502</strong></p><p><a href="https://scotland.shelter.org.uk/get_help/get_homelessness_help_in_glasgow" target="_blank" rel="noopener">See Glasgow contact details</a></p></article>
+</div><p class="directory-disclaimer">If you are in immediate danger, call 999. If you are homeless or may lose your home, seek advice promptly; you do not need to be sleeping rough to ask the council for help.</p></div></section>
+
+<section class="soft"><div class="wrap"><div class="section-head"><div class="eyebrow">How it will work</div><h2>A clearer route to local help.</h2><p>Our aim is to make finding support feel more straightforward, without promising services we haven't checked.</p></div>
+<div class="steps"><div class="step"><div class="num">01 / TELL US</div><h3>Share what families need</h3><p>Families can complete our short survey and tell us what would make a real difference.</p></div><div class="step"><div class="num">02 / CONNECT</div><h3>Build trusted connections</h3><p>We will identify local organisations and businesses and check the information before listing them.</p></div><div class="step"><div class="num">03 / FIND SUPPORT</div><h3>Make useful information easier to find</h3><p>Our goal is a simple place to explore support options and contact providers directly.</p></div></div>
+</div></section>
+<section id="about"><div class="wrap about"><div><div class="eyebrow">About Family Backup</div><div class="section-head"><h2>Built around what families actually need.</h2><p>Family Backup is an early-stage project being developed to help families find relevant local support and community services, starting in Glasgow.</p></div><p style="color:var(--muted)">We're listening first. The survey will help us understand which challenges matter most and what information families want in one easy-to-use place.</p></div>
+<div class="about-panel"><strong>Our promise</strong><p>We will aim to share clear, useful information and direct families to the organisations that provide support. Family Backup is not an emergency service and does not replace professional advice.</p></div></div></section>
+<section class="soft" id="partners"><div class="wrap"><div class="section-head"><div class="eyebrow">Work with us</div><h2>Good support starts with good connections.</h2><p>We'd like to hear from community organisations, family services, local groups and responsible businesses interested in helping families.</p></div><div class="callout"><div><h2>Are you an organisation or local business?</h2><p>Get in touch to discuss being part of the Family Backup network as the project develops.</p></div><a class="btn" href="#contact">Become a partner</a></div></div></section>
+<section id="join"><div class="wrap"><div class="section-head"><div class="eyebrow">Have your say</div><h2>Help us build something useful.</h2><p>Your feedback will help shape Family Backup. Take part in our family survey or contact us with an idea.</p></div>
+<div class="contact-box"><strong>Family survey</strong><p>Our survey is ready to be connected here. Once the Cognito Forms public link is added, this button will take families directly to it.</p><a class="btn" href="mailto:hello@familybackup.co.uk?subject=Family%20Backup%20survey%20link" style="color:white">Ask about the survey</a><p style="font-size:.86rem;margin-top:16px">Website setup note: replace this temporary button with the live Cognito Forms survey URL before publishing.</p></div></div></section>
+<section id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's start a conversation.</h2><p>Interested in the project, have a suggestion, or want to explore a partnership?</p></div><div class="contact-box"><strong>Family Backup</strong><p>Email contact details will be added before the website goes public. For now, this is a draft website and the contact details need confirming.</p><p><strong>Starting area:</strong> Glasgow, Scotland</p></div></div></section>
+</main>
+<footer><div class="wrap foot"><span><strong>Family Backup</strong> · Support for families, all in one place.</span><span>Glasgow, Scotland · Information checked before listing</span></div></footer>
+
+<script>
+(function(){
+ const search=document.getElementById('directory-search');
+ const cards=Array.from(document.querySelectorAll('.directory-card'));
+ const buttons=Array.from(document.querySelectorAll('.filter'));
+ const empty=document.getElementById('no-results');
+ let category='all';
+ function update(){const term=(search.value||'').trim().toLowerCase();let shown=0;cards.forEach(card=>{const matchesCategory=category==='all'||card.dataset.category===category;const haystack=(card.dataset.search+' '+card.innerText).toLowerCase();const matchesText=!term||haystack.includes(term);const visible=matchesCategory&&matchesText;card.hidden=!visible;if(visible)shown++;});empty.hidden=shown!==0;}
+ buttons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.filter;buttons.forEach(b=>b.classList.toggle('active',b===button));update();}));
+ search.addEventListener('input',update);
+})();
+</script>
+</body></html>
